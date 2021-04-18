@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <!--- Don't forget to add this meta tag otherwise your design won't responsive ---->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>empowher</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+ -->	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="10.css">
+</head>
+<body>
+
+	<div class="nbc">
+		<div class="nc">
+			<div class="lc">
+				<a href="#">EMPOWHER</a>
+			</div>
+			<div class="n">
+				<div class="nm">
+					<a href="#" id="nt"><span></span></a>
+				</div>
+				<ul class="nl">
+					<li><a href="logo.html">Logo</a></li>
+					<li><a href="about.html">about us <i class="fa fa-caret-down"></i></a>
+					</li>
+					<li><a href="#">jobs <i class="fa fa-caret-down"></i></a>
+						<ul class="nd">
+							<li><a href="govt.html">government.jobs</a></li>
+							<li><a href="wfh.html">work from home</a></li>
+						</ul>
+					</li>
+					<li><a href="#">laws and rights <i class="fa fa-caret-down"></i></a>
+						<ul class="nd">
+							<li><a href="rape.html">rape</a></li>
+							<li><a href="molest.html">molestation</a></li>
+							<li><a href="dv.html">domestic violence</a></li>
+						</ul>
+
+					</li>
+					<li><a href="help.html">helpline numbers</a></li>
+                                                                                                           <li><a href="#">FAQ</a></li>
+					<li><a href="index.html">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+    <div class="ic">
+    	<img src="w8.jpg">
+    </div>
+    <!-- slideshow -->
+    <div class="slidebody">
+    <div class="img-slider">
+      <div class="slide active">
+        <img src="w11.jpg" alt="">
+        <div class="info">
+        </div>
+      </div>
+      <div class="slide">
+        <img src="w7.jpg" alt="">
+        <div class="info">
+      
+        </div>
+      </div>
+      <div class="slide">
+        <img src="w6.jpg" alt="">
+        <div class="info">
+        
+        </div>
+      </div>
+      <div class="slide">
+        <img src="w9.jpg" alt="">
+        <div class="info">
+    
+        </div>
+      </div>
+      <div class="slide">
+        <img src="w10.jpg" alt="">
+        <div class="info">
+        </div>
+      </div>
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      </div>
+    </div>
+</div>
+    <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+    
+
+
+  <script src="101.js"></script>
+</div>
+    	
+    <!-- icons -->
+    <div class="iwrapper">
+      		<div class="ibutton">
+        		<div class="icon"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+        			<span>Facebook</span>
+
+      		</div>
+      		<div class="ibutton">
+        		<div class="icon"><a href="#"><i class="fab fa-twitter"></i></a></div>
+        			<span>Twitter</span>
+      		</div>
+      		<div class="ibutton">
+        		<div class="icon"><a href="#"><i class="fab fa-instagram"></i></a></div>
+        			<span>Instagram</span>
+      			</div>
+      		<div class="ibutton">
+        		<div class="icon"><a href="https://www.linkedin.com/in/sneha-sikarwar-114168206"><i class="fab fa-linkedin"></i></a></div>
+       			 	<span>Linkedin</span>
+      		</div>
+        	<div class="ibutton">
+        		<div class="icon"><a href="#"><i class="fab fa-youtube"></i></a></div>
+        			<span>YouTube</span>
+      		</div>
+      		<div class="ibutton">
+        		<div class="icon"><a href =" https://github.com/snehasikarwar"><i class="fab fa-github"></i></a></div>
+        			<span>Github</span>
+      		</div>
+    	</div>
+    	
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="10.js"></script>
+</body>
+</html>
